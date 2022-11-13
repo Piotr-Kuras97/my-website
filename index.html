@@ -207,17 +207,17 @@
             <div class="send-mail">
                 <form id="contactform" action="https://formsubmit.io/send/piotr.kuras.1997@gmail.com" method="POST">
                     <label for="name">Your name</label>
-                    <input name="name" type="text" id="name" placeholder ="enter your name">
+                    <input name="name" type="text" id="name" placeholder="enter your name" required>
 
                     <label for="email">Your e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="enter your email address">
+                    <input type="email" id="email" name="email" placeholder="enter your email address" required>
 
                     <label for="msg">Your message</label>
-                    <textarea name="msg" id="msg" rows="11" placeholder="enter your message"></textarea>
+                    <textarea name="msg" id="msg" rows="11" placeholder="enter your message" required></textarea>
 
                     <input name="_formsubmit_id" type="text" style="display:none">
 
-                    <input name="_redirect" type="hidden" id="name" value="">
+                    <input name="_redirect" type="hidden" id="name" value="https://piotr-kuras97.github.io/mail-sended.html">
 
                     <input class="send" value="Send message" type="submit">
             </form>
@@ -226,7 +226,14 @@
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="go-up">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+
+        <div>Piotr Kuraś <span>|</span> 2022</div>
+        <div><i class="fa-regular fa-copyright"></i><span> |</span> All Rights Reserved</div>
+    </footer>
     
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"

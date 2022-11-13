@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     background-color: black;
-    z-index: 3;
+    z-index: 5;
     animation: start 5s linear both;
     .ring{
      position:absolute;
@@ -71,7 +71,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: url(my-website/images/bacground.png);
+    background-image: url(/my-website/images/bacground.png);
     background-size: cover;
     filter: grayscale(60%);
     z-index: -1;
