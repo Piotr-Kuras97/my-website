@@ -1,117 +1,94 @@
 .skills{
     position: relative;
     margin-top: 15%;
-    z-index: 0;
     .all-skills{
-        padding-top: 400px;
-        transition: 1s;
-        &.active{
-        padding-top: 0;
-        }
         .skill{
+            margin-top: 10%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            margin-left: 10%;
-            margin-top: 5%;
-
-            p{
-                font-size: 1.2rem;
-                color: white;
-                transition: .5s;
-                &:nth-of-type(1).active{
-                    transform: scale(1.1);
-                }
-                i{
-                    margin-right: 10px;
-                }
-                i.active{
-                    animation: arrowSkills 1s linear infinite alternate
-                }
-            }
-            p:nth-of-type(2){
-                opacity: 0;
-                text-transform: uppercase;
-                &.active{
-                    opacity: 1
-                }
-            }
-            .progress{
-                margin-top: 25px;
+            justify-content: center;
+            .img-skill{
                 flex-basis: 100%;
-                align-items: center;
+                img{
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                }
+            }
+            h3{
+                flex-basis: 75%;
                 text-align: center;
-                opacity: 0;
-                transition: .5s;
-                &.active{
-                    opacity: 1;
+                margin-top: 2%;
+            }
+            .progress-bar{
+                position: relative;
+                margin-top: 2%;
+                width: 45%;
+                height: 15px;
+                border-radius: 15px;
+                background-color: #1B1B1B;
+                div{
+                    margin-left: 5px;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 80%;
+                    height: 7.5px;
+                    background-color: #379237;
+                    &.medium{
+                        width: 50%;
+                        background-color: #FD841F;
+                    }
+                    &.low{
+                        width: 20%;
+                        background-color: #FF1E1E;
+                    }
                 }
-                progress{
-                    background-color: white;
-                    border: 5px solid #1B1B1B;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px){
+    .skills{
+        margin-top: 10%;
+        .all-skills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .skill{
+                margin-top: 2%;
+                margin-bottom: 4%;
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .skills{
+        margin-top: 6%;
+        .all-skills{
+            .skill{
+                .img-skill{
+                    img{
+                        width: 60px;
+                        transition: 1s;
+                    }
+                }
+                h3{
+                    font-size: 1.6rem;
+                }
+                .progress-bar{
                     width: 40%;
-                    height: 15px;
-                    border-radius: 15px;
-                    &::-webkit-progress-value{
-                        background-color: blue;
-                        border-radius: 15px;
-                    }
-                    &::-webkit-progress-bar{
-                        background-color: #1B1B1B;
-                        border-radius: 15px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 768px){
-.skills{
-    .all-skills{
-        display: flex;
-        flex-wrap: wrap;
-         .skill{
-            flex-basis: 35%;
-            height: 5%;
-            p{
-                font-size: 2.2rem;
-            }
-            .progress{
-                progress{
-                    width: 50%;
                     height: 20px;
+                    div{
+                        height: 10px;
+                    }
                 }
             }
         }
     }
-}
-}
-
-@media (min-width:1024px){
-.skills{
-    margin-top: 10%;
-    .all-skills{
-        margin-top: 2%;
-        .skill{
-            p{
-                font-size: 2rem;
-            }
-        }
-    }
-}
-}
-
-@media (min-width: 1200px){
-.skills{
-    margin-top: 6%;
-    .all-skills{
-        margin-top: 0%;
-        .skill{
-            p{
-                font-size: 2.2rem;
-            }
-        }
-    }
-}
 }

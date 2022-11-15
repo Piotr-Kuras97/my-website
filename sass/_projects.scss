@@ -6,11 +6,7 @@
     .all-projects{
         margin-top: 0%;
         position: relative;
-        left: -100%;
         transition: 1s;
-        &.active{
-           left: 0;
-        }
         .project-container{
             width: 80%;
             margin: 0 auto;
@@ -29,14 +25,18 @@
                 }
                 a{
                     position: absolute;
+                    width: 50%;
+                    background-color: #1B1B1B;
                     color: white;
-                    bottom: 10px;
+                    bottom: 0px;
                     font-size: 1.4rem;
+                    text-align: center;
+                    padding: 3px;
                     &:nth-of-type(1){
-                        left: 10px;
+                        left: 0px;
                     }
                     &:nth-of-type(2){
-                        right: 10px;
+                        right: 0px;
                     }
                 }
             }
@@ -66,12 +66,17 @@
                         p{
                             margin-left: 0;
                             margin-right: 10%;
+                            }
                         }
                     }
-                }
-                }
-                img{
-                   width: 300px;
+                    .img-container{
+                        img{
+                            width: 300px;
+                        }
+                        a{
+                            font-size: 2rem;
+                        }
+                    }
                 }
                 .text{
                     display: flex;

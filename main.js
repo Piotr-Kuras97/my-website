@@ -2,7 +2,7 @@ const burgerIcon = document.querySelector(".fa-bars")
 const xmarkIcon =  document.querySelector(".fa-xmark")
 const menu = document.querySelector(".menu")
 const h1Title = document.querySelector(".header h1")
-const h1Txt = "Hey! I'm Piotr Kuraś"
+const h1Txt = "Hey! I'm Piotr"
 const h2Title = document.querySelector(".header h2")
 const h2Txt = "Front End Developer"
 const start = document.querySelector(".start")
@@ -34,7 +34,7 @@ const addLetterH1 = ()=>{
         }
     },100)
 }
-const timeout1 = setTimeout(addLetterH1, 5000)
+const timeout1 = setTimeout(addLetterH1, 3000)
 
 let indexTextH2 = 0
 const addLetterH2 = () => {
@@ -44,17 +44,17 @@ const addLetterH2 = () => {
             clearInterval(interv)
         }},100)
 }
-const timeout2 = setTimeout(addLetterH2, 7000)
+const timeout2 = setTimeout(addLetterH2, 4500)
 // const indexTypingH2 = setInterval(addLetterH2, 150)
 
 setTimeout(()=> {
     start.remove()
-},5500)
+},3000)
 
 
 setTimeout(() => {
     imageMe.style.opacity = "1"
-}, 6000)
+}, 4000)
 
 const slideList = [{
     img: "images/example.jpg"
@@ -82,55 +82,9 @@ const changeSlide = () => {
 setInterval(changeSlide, timeImg)
 
 
-const arrows = [...document.querySelectorAll(".skill .fa-arrow-right")]
-const skillText = [...document.querySelectorAll(".skills .all-skills .skill p:nth-of-type(2)")]
-const progressBars = [...document.querySelectorAll(".progress")]
-const skillTitle = [...document.querySelectorAll(".skill p:nth-of-type(1)")]
 
-arrows.forEach((arrow) => {
-    arrow.addEventListener("click", ()=>{
-        arrow.classList.toggle("active")
-        skillText[arrows.indexOf(arrow)].classList.toggle("active")
-        progressBars[arrows.indexOf(arrow)].classList.toggle("active")
-        skillTitle[arrows.indexOf(arrow)].classList.toggle("active")
-    })
-})
 
 // scroll-effects (JQuery)
-
-$(window).on("scroll", function(){
-    const scrollValue = $(this).scrollTop()
-    const $aboutMe = $(".item-container")
-    const aboutMeFromTop = $aboutMe.offset().top
-    const aboutMeHeight = $aboutMe.outerHeight()
-    const windowHeight = $(window).height()
-
-    const $allSkills = $(".all-skills")
-    const allSkillsFromTop = $allSkills.offset().top
-    const allSkillsHeight = $allSkills.outerHeight()
-
-    const $projects = $(".all-projects")
-    const projectsFromTop = $projects.offset().top
-    const projectsHeight = $projects.outerHeight()
-
-    if (scrollValue > aboutMeFromTop + aboutMeHeight/2 - windowHeight){
-        $aboutMe.addClass("active")
-    } else if (scrollValue < 100){
-        $aboutMe.removeClass("active")
-    }
-
-    if (scrollValue > allSkillsFromTop + allSkillsHeight/8 - windowHeight){
-        $allSkills.addClass("active")
-    } else if (scrollValue < 100){
-        $allSkills.removeClass("active")
-    }
-
-    if (scrollValue > projectsFromTop + projectsHeight/3 - windowHeight){
-        $projects.addClass("active")
-    } else if (scrollValue < 100){
-        $projects.removeClass("active")
-    }
-})
 
 const btnExplore = document.querySelector(".explore")
 
@@ -146,6 +100,7 @@ btnExplore.addEventListener("click", ()=>{
     btnExplore.classList.remove("remove")
 })
 
+AOS.init()
 
 
 

@@ -5,75 +5,81 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #1B1B1B;
     z-index: 5;
-    animation: start 5s linear both;
-    .ring{
-     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:150px;
-    height:150px;
-    background:transparent;
-    border:3px solid #3c3c3c;
-    border-radius:50%;
-    text-align:center;
-     line-height:150px;
-    font-family:sans-serif;
-    font-size:20px;
-    color:#fff000;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    text-shadow:0 0 10px #fff000;
-    box-shadow:0 0 20px rgba(0,0,0,.5);
-    &::before{
-        content:'';
-        position:absolute;
-        top:-3px;
-        left:-3px;
-        width:100%;
-        height:100%;
-        border:3px solid transparent;
-        border-top:3px solid #fff000;
-        border-right:3px solid #fff000;
-        border-radius:50%;
-        animation:animateC 5s linear both;
-      }
-    span{
-        display:block;
-        position:absolute;
-        top:calc(50% - 2px);
-        left:50%;
-        width:50%;
-        height:4px;
-        background:transparent;
-        transform-origin:left;
-        animation:animate 5s linear both;
-        &::before{
-            
-                content:'';
-                position:absolute;
-                width:16px;
-                height:16px;
-                border-radius:50%;
-                background:#fff000;
-                top:-6px;
-                right:-8px;
-                box-shadow:0 0 20px #fff000;
-            
+    animation: start 3s linear both;
+    .draw-animation{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      overflow: hidden;
+      animation: startGlow .3s 2s linear both alternate;
+      .start-text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6rem;
+        span{
+          opacity: 0;
+          animation:letterStart .4s linear both;
+          &:nth-of-type(1){
+            animation-delay: 1.2s;
+          }
+          &:nth-of-type(2){
+            animation-delay: 1.6s;
+          }
         }
       }
+      .line-down, .line-right, .line-up, .line-left{
+        position: absolute;
+        background-color: #F9F871;
+      }
+      .line-down{
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        transform: scaleX(0);
+        transform-origin: 0;
+        animation: lineDown .3s linear both;
+      }
+      .line-right{
+        height: 100%;
+        width: 20px;
+        right: 0;
+        transform: scaleY(0);
+        transform-origin: 0 100%;
+        animation: lineRight .3s .3s linear both;
+      }
+      .line-up{
+        width: 100%;
+        height: 20px;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: 100%;
+        animation: lineDown .3s .6s linear both;
+      }
+      .line-left{
+        height: 100%;
+        width: 20px;
+        left: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        animation: lineRight .3s .9s linear both;
+      }
     }
-
 }
 .bg{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: url(/my-website/images/bacground.png);
+    background-image: url(/my-website/images/backkground.png);
     background-size: cover;
-    filter: grayscale(60%);
+    filter: grayscale(40%);
     z-index: -1;
 }
 
