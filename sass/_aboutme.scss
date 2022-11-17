@@ -1,22 +1,67 @@
 .about-me{
     position: relative;
     margin-top: 15%;
-    z-index: -1;
+    z-index: 0;
     .item-container{
         position: relative;
         transition: 1s;
         p{
-            color: white;
+            color: $white;
             margin: 2% 10% 0;
             font-size: 1.5rem;
             text-align: justify;
         }
-        img{
-            width: 80%;
-            margin-left: 10%;
-            margin-top: 5%;
-            border-radius: 15px;
-            border: 5px solid #1B1B1B;;
+        .slide-container{
+            position: relative;
+            img{
+                border: 4px solid $dark;
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 5%;
+                border-radius: 15px;
+                }
+            .dots{
+                position: absolute;
+                height: 20px;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                span{
+                    display: inline-block;
+                    background-color: $dark;
+                    margin: 0 10px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    opacity: 0.7;
+                    &.active{
+                        opacity: 1;
+                        box-shadow: 0 0 0 2px $box-color;
+                        }
+                    }
+                }
+            .arrow{
+                position: absolute;
+                top: 0;
+                left: 10%;
+                right: 10%;
+                margin: 2% auto;
+                height: 100%;
+                i{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 2rem;
+                    cursor: pointer;
+                    opacity: 0.5;
+                    }
+                i:nth-of-type(1){
+                    left: 5%
+                    }
+                i:nth-of-type(2){
+                    right: 5%;
+                    }
+                }
             }
         }
     }
@@ -43,15 +88,35 @@
                     flex-basis: 35%;
                     font-size: 1.7rem;
                 }
-                img{
+                .slide-container{
                     position: absolute;
-                    width: 35%;
+                    flex-basis: 40%;
+                    left: 55%;
                     right: 10%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    margin-top: 2%;
-                    margin-left: 0;
+                    top: 2%;
+                    height: 300px;
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 100%;
+                        width: 100%;
+                        margin-top: 2%;
+                        margin-left: 0;
+                    }
+                    .arrow{
+                        left: 0;
+                        right: 0;
+                        i{
+                            transition: .3s;
+                        }
+                        i:hover{
+                            font-size: 2.5rem;
+                            opacity: 1;
+                        }
+                    }
                 }
+              
             }
         }
     }

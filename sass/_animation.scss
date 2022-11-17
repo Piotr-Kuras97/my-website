@@ -25,7 +25,7 @@
 @keyframes arrowSkills {
   100% {
     margin-left: 10px;
-    text-shadow: 0 0 0 5px white;
+    text-shadow: 0 0 0 5px $white;
   }
 }
 
@@ -63,7 +63,19 @@
     box-shadow: 0;
   }
   100%{
-    box-shadow: 0 0 20px #F9F871;
+    box-shadow: 0 0 20px $box-color;
+  }
+}
+
+@keyframes imgAnimation {
+  0%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
 

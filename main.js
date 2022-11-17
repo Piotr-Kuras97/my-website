@@ -67,9 +67,16 @@ const slideList = [{
 }]
 
 const imageAboutMe = document.querySelector(".about-me img")
+const dots = [...document.querySelectorAll(".dots span")]
 const timeImg = 5000
 let active = 0
 
+
+const changeDot = () => {
+    const activeDot = dots.findIndex(dot => dot.classList.contains("active"))
+    dots[activeDot].classList.remove("active")
+    dots[active].classList.add("active")
+ }
 
 const changeSlide = () => {
     active++
@@ -77,14 +84,43 @@ const changeSlide = () => {
         active = 0
     }
     imageAboutMe.src = slideList[active].img
+    changeDot()
 }
 
-setInterval(changeSlide, timeImg)
+let slideChanger = setInterval(changeSlide, 5000)
+
+const arrowLeft = document.querySelector(".arrow .fa-arrow-left")
+const arrowRight = document.querySelector(".arrow .fa-arrow-right")
+
+arrowRight.addEventListener("click", () => {
+    clearInterval(slideChanger)
+    if (active <= slideList.length - 2){
+        active++
+        imageAboutMe.src = slideList[active].img;
+        changeDot()
+    } else if (active == 2){
+        active = 0
+        imageAboutMe.src = slideList[active].img;
+        changeDot() 
+    }
+    slideChanger = setInterval(changeSlide, 5000);
+})
+
+arrowLeft.addEventListener("click", () => {
+    clearInterval(slideChanger)
+    if (active == 0){
+        active = 2
+        imageAboutMe.src = slideList[active].img;
+        changeDot()
+    } else if (active <=2){
+        active--
+        imageAboutMe.src = slideList[active].img;
+        changeDot()
+    }
+    slideChanger = setInterval(changeSlide, 5000);
+})
 
 
-
-
-// scroll-effects (JQuery)
 
 const btnExplore = document.querySelector(".explore")
 

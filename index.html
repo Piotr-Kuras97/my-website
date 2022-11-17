@@ -12,6 +12,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Piotr Kuraś Portfolio</title>
+
 </head>
 <body>
 
@@ -82,7 +83,18 @@
                 <p>I started my adventure with programming in August 2022, and since then I have been trying to learn new things and improve my skills every day.</p>
                 <p>Privately, I am interested in the broad field of rocket development and Polish politics. In addition, I spend my free time traveling and playing chess.</p>
                 <p>P.S If you want to play chess with me then feel free to contact me.</p>
-                <img src="images/example.jpg" alt="">
+                <div class="slide-container">
+                    <img src="images/example.jpg" alt="">
+                    <div class="dots">
+                        <span id="one" class="active"></span>
+                        <span id="two"></span>
+                        <span id="three"></span>
+                    </div>
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -230,7 +242,7 @@
         <div><i class="fa-regular fa-copyright"></i><span> |</span> All Rights Reserved</div>
     </footer>
     
-
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"

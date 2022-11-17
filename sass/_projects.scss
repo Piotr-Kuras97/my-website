@@ -26,8 +26,8 @@
                 a{
                     position: absolute;
                     width: 50%;
-                    background-color: #1B1B1B;
-                    color: white;
+                    background-color: $dark;
+                    color: $white;
                     bottom: 0px;
                     font-size: 1.4rem;
                     text-align: center;
@@ -41,9 +41,9 @@
                 }
             }
             p{  
-                background-color: #1B1B1B;
+                background-color: $dark;
                 border-radius: 10px;
-                color: white;
+                color: $white;
                 font-size: 1.3rem;
                 text-align: justify;
                 padding: 15px;
@@ -75,6 +75,11 @@
                         }
                         a{
                             font-size: 2rem;
+                            transition: .3s;
+                            &:hover{
+                                color: $dark;
+                                background-color: $white;
+                            }
                         }
                     }
                 }

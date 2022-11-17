@@ -27,7 +27,7 @@
                 width: 45%;
                 height: 15px;
                 border-radius: 15px;
-                background-color: #1B1B1B;
+                background-color: $dark;
                 div{
                     margin-left: 5px;
                     border-radius: 5px;
@@ -72,6 +72,10 @@
         margin-top: 6%;
         .all-skills{
             .skill{
+                transition: .3s;
+                &:hover{
+                    transform: scale(1.2);
+                }
                 .img-skill{
                     img{
                         width: 60px;

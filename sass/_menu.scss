@@ -4,7 +4,7 @@
         position: fixed;
         right: 20px;
         top: 20px;
-        color: white;
+        color: $white;
         font-size: 3rem;
         z-index: 4;
         &.active{
@@ -39,7 +39,7 @@
             a{
                 letter-spacing: 3px;
                 font-size: 2.5rem;
-                color: white;
+                color: $white;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -51,7 +51,7 @@
         div{
             margin-bottom: 10px;
             a{
-                color: white;
+                color: $white;
                 font-size: 2rem;
             }
         }
@@ -59,7 +59,7 @@
             position: relative;
             display: block;
             width: 1px;
-            background-color: darkgray;
+            background-color: darkgrey;
             height: 100px;
             left: 50%;
             transform: translateX(-50%);
@@ -121,7 +121,7 @@
                         position: absolute;
                         width: 100%;
                         height: 8px;
-                        background-color: #FAF4B7;
+                        background-color: $box-color;
                         transition: .5s;
                         transform: scaleX(0);
                         transform-origin: 0;
@@ -143,7 +143,7 @@
         div{
             margin-bottom: 10px;
             a{
-                color: white;
+                color: $white;
                 font-size: 2rem;
                 i{
                     transition: .3s;

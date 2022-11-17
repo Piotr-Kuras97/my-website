@@ -1,0 +1,8 @@
+.glide {
+  position: relative;
+}
+.glide .glide__track .glide__slides .glide__slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=.test.css.map */

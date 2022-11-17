@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
-    background-color: #1B1B1B;
+    background-color: $dark;
     z-index: 5;
     animation: start 3s linear both;
     .draw-animation{
@@ -37,7 +37,7 @@
       }
       .line-down, .line-right, .line-up, .line-left{
         position: absolute;
-        background-color: #F9F871;
+        background-color: $box-color;
       }
       .line-down{
         bottom: 0;
@@ -77,7 +77,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: url(/my-website/images/background.png); 
+    background-image: url(/my-website/images/background.png);
     background-size: cover;
     filter: grayscale(40%);
     z-index: -1;
